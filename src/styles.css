@@ -14,7 +14,7 @@ input.form-control:focus{
 
 button[type=submit].btn{
     border-radius: 20px;
-    background-color: #FF6A00;
+    background-color: lightgreen;
     color: #fff;
 }
 
