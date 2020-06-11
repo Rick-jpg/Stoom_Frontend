@@ -3,16 +3,17 @@
       <input class="form-control mr-sm-3 col-xs-5" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
+    <button class="btn btn-succus float-right-my-3 my-sm-0">{{userDetails.userName}}'s profile</button>
     <button class="btn btn-danger float-right my-2 my-sm-0"(click)="OnLogout()">Logout</button>
   </nav>
-  <nav class="navbar navbar-light bg-white">
-    <form class="form-inline">
-      <label class="form-control mr-sm-3 col-xs-4">Horror</label>
-    </form>
-    <form class="form-inline">
-      <label class="form-control mr-sm-3 col-xs-4">Adventure</label>
-    </form>
-    <form class="form-inline">
-      <label class="form-control mr-sm-3 col-xs-4">Puzzle</label>
-    </form>
-  </nav>
+
+<div class="card m-5" style="width: 18rem" *ngIf="userDetails">
+<ul class="list-group">
+  <li class="list-group-item">
+    <strong>Username: {{userDetails.userName}}</strong>
+  </li>
+  <li class="list-group-item">
+    <strong>Password: {{userDetails.password}}</strong>
+  </li>
+</ul>
+</div>

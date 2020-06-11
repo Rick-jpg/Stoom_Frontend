@@ -8,11 +8,15 @@ import { ToastrModule } from "ngx-toastr";
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { UserComponent} from './user/user.component';
-import { RegistrationComponent} from './user/registration/registration.component'
+import { UserComponent } from './user/user.component';
+import { RegistrationComponent } from './user/registration/registration.component'
 import { UserService } from './shared/user.service';
 import { LoginComponent } from './user/login/login.component';
 import { HomeComponent } from './home/home.component';
+import { GameService } from './shared/game.service';
+
+
+
 
 
 
@@ -22,7 +26,10 @@ import { HomeComponent } from './home/home.component';
     UserComponent,
     RegistrationComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+
+
+
   ],
   imports: [
     BrowserModule,
@@ -36,7 +43,7 @@ import { HomeComponent } from './home/home.component';
       progressBar: true
     }),
   ],
-  providers: [UserService],
+  providers: [UserService, GameService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
